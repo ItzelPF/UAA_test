@@ -6,14 +6,17 @@ class App:
         return a+b
 
     def resta(a,b):
-        return 0
+        return a-b
 
     def multiplicacion(a,b):
-        return 0
+        return a*b
 
     def division(a,b):
-        return 0
-
+        x= a/b
+        if(x!=0):
+            return x
+        else:
+            return 0
     # 1. Verifica si una lista contiene un número primo
     def contiene_numero_primo(lista):
         """
