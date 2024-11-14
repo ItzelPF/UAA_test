@@ -83,21 +83,28 @@ class App:
         Verifica si todos los elementos de la lista son únicos.
         Retorna True si son únicos, de lo contrario, False.
         """
-        pass
+        return len(lista) == len(set(lista))
 
     # 7. Calcula el factorial de un número sin usar recursión
     def calcular_factorial(numero):
         """
         Calcula y retorna el factorial de 'numero' usando un ciclo.
         """
-        pass
-
+        resultado = 1 #1 porque si ponemos 0 la multiplicacion siempre será 0
+        for i in range(1,numero+1):
+            resultado *= i
+        return resultado
+        
     # 8. Cuenta la cantidad de vocales en una cadena
     def contar_vocales(cadena):
         """
         Cuenta y retorna la cantidad de vocales en la cadena.
         """
-        pass
+        cont = 0
+        for letra in cadena:
+            if letra == 'a' or letra == 'e' or letra == 'i' or letra == 'o' or letra == 'u':
+                cont += 1
+        return cont
 
     # 9. Encuentra el segundo número mayor en una lista
     def segundo_mayor(lista):
