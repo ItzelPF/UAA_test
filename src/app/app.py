@@ -36,15 +36,24 @@ class App:
         Cuenta la cantidad de números pares en el rango desde 'inicio' hasta 'fin' (inclusive).
         Retorna la cantidad de números pares.
         """
-        pass
-
+        cont = 0
+        for num in range (inicio, fin + 1):
+            if num % 2 == 0:
+                cont+=1
+        return cont
+ 
     # 3. Encuentra el número máximo en una lista que sea múltiplo de un valor dado
     def maximo_multiplo(lista, multiplo):
         """
         Encuentra y retorna el valor máximo de la lista que es múltiplo del parámetro 'multiplo'.
         Si no hay múltiplos, retorna None.
         """
-        pass
+        maximo = None
+        for i in lista:
+            if i % multiplo == 0:
+                if i > maximo:
+                    maximo = i
+        return maximo
 
     # 4. Verifica si una palabra es palíndroma (se lee igual en ambos sentidos)
     def es_palindromo(palabra):
@@ -63,7 +72,10 @@ class App:
         """
         Calcula y retorna la suma de los primeros 'n' números impares.
         """
-        pass
+        suma = 0
+        for i in range (1, 2*n, 2): #2*n para generar más numero y llegar a los primeros n impares
+            suma += i
+        return suma
 
     # 6. Verifica si todos los elementos de una lista son únicos
     def elementos_unicos(lista):
