@@ -23,6 +23,11 @@ class App:
         Verifica si hay al menos un número primo en la lista.
         Retorna True si hay un número primo, de lo contrario, False.
         """
+        for i in lista:
+            if i % 2 != 0:
+                return True
+            else:
+                return False
         pass
 
     # 2. Cuenta los números pares en un rango dado
@@ -47,7 +52,11 @@ class App:
         Verifica si la palabra es un palíndromo (igual al leerla al revés).
         Retorna True si es palíndromo, de lo contrario, False.
         """
-        pass
+        reves = palabra[::-1]
+        if palabra == reves:
+            return True
+        else:
+            return False
 
     # 5. Calcula la suma de los primeros n números impares
     def suma_primeros_impares(n):
