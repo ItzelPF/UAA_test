@@ -126,11 +126,8 @@ class App:
         """
         Genera y retorna una lista con los primeros 'n' términos de la serie de Fibonacci.
         """
-        if(n < 2):
-            return n
-        else:
-            fibonacci = [0, 1]
-            while len(fibonacci) < n:
-                fibonacci.append(fibonacci[-1] + fibonacci[-2])
-            return fibonacci
+        fibonacci = [0, 1]
+        while len(fibonacci) < n:
+            fibonacci.append(fibonacci[-1] + fibonacci[-2])
+        return fibonacci[:n]
             
