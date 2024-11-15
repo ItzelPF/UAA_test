@@ -28,7 +28,6 @@ class App:
                 return True
             else:
                 return False
-        pass
 
     # 2. Cuenta los números pares en un rango dado
     def contar_pares(inicio, fin):
@@ -48,12 +47,15 @@ class App:
         Encuentra y retorna el valor máximo de la lista que es múltiplo del parámetro 'multiplo'.
         Si no hay múltiplos, retorna None.
         """
-        maximo = None
+        multiplos = []
         for i in lista:
             if i % multiplo == 0:
-                if i > maximo:
-                    maximo = i
-        return maximo
+                multiplos.append(i)
+                
+        if multiplos:
+            return max(multiplos)
+        else: 
+            print(None)
 
     # 4. Verifica si una palabra es palíndroma (se lee igual en ambos sentidos)
     def es_palindromo(palabra):
@@ -101,7 +103,7 @@ class App:
         Cuenta y retorna la cantidad de vocales en la cadena.
         """
         cont = 0
-        for letra in cadena:
+        for letra in cadena.lower():
             if letra == 'a' or letra == 'e' or letra == 'i' or letra == 'o' or letra == 'u':
                 cont += 1
         return cont
@@ -112,11 +114,23 @@ class App:
         Encuentra y retorna el segundo número más grande en la lista.
         Si no existe, retorna None.
         """
-        pass
+        lista2 = list(set(lista)) #eliminar duplicados
+        lista2.sort(reverse=True)
+        if len(lista2) < 2:
+            return None 
+        else:
+            return lista2[1]
 
     # 10. Calcula la serie de Fibonacci hasta n términos
     def fibonacci(n):
         """
         Genera y retorna una lista con los primeros 'n' términos de la serie de Fibonacci.
         """
-        pass
+        if(n < 2):
+            return n
+        else:
+            fibonacci = [0, 1]
+            while len(fibonacci) < n:
+                fibonacci.append(fibonacci[-1] + fibonacci[-2])
+            return fibonacci
+            
